@@ -10,7 +10,7 @@ Se utiliza cuatro modelos distintos preentrenados para NLP y se compara su nivel
 ## CÓDIGO PYTHON:
 
 ### PRIMER ANÁLISIS: utilizando el modelo "BERT BASE MULTILINGUAL UNCASED SENTIMENT":
-
+```
 from transformers import pipeline
 
 clasificador = pipeline('sentiment-analysis',    
@@ -24,7 +24,7 @@ resultados = clasificador(frases)
 
 for result in resultados:
     print(f"polaridad: {result['label']}, score: {round(result['score'], 2)}")
-
+```
 OUTPUT:
 
 polaridad: 5 stars, score: 0.91
@@ -34,7 +34,7 @@ polaridad: 1 star,  score: 0.91
 polaridad: 3 stars, score: 0.77
 
 ### SEGUNDO ANÁLISIS: utilizando el modelo "ROBERTUITO":
-
+```
 from transformers import pipeline
 
 clasificador = pipeline('sentiment-analysis',    
@@ -48,7 +48,7 @@ resultados = clasificador(frases)
 
 for result in resultados:
     print(f"polaridad: {result['label']}, score: {round(result['score'], 2)}")
-
+```
 OUTPUT:
 
 polaridad: POS, score: 0.98
@@ -58,7 +58,7 @@ polaridad: NEG, score: 0.97
 polaridad: POS, score: 0.96
 
 ### TERCER ANÁLISIS: utilizando el modelo "BERT BASE SPANISH WWM CASED":
-
+```
 from transformers import pipeline
 
 clasificador = pipeline('sentiment-analysis',    
@@ -72,7 +72,7 @@ resultados = clasificador(frases)
 
 for result in resultados:
     print(f"polaridad: {result['label']}, score: {round(result['score'], 2)}")
-
+```
 OUTPUT:
 
 polaridad: LABEL_1, score: 0.53
@@ -82,7 +82,7 @@ polaridad: LABEL_0, score: 0.52
 polaridad: LABEL_1, score: 0.5
 
 ### CUARTO ANÁLISIS: utilizando el modelo "BERT BASE SPANISH WWM UNCASED":
-
+```
 from transformers import pipeline
 
 clasificador = pipeline('sentiment-analysis',    
@@ -96,7 +96,7 @@ resultados = clasificador(frases)
 
 for result in resultados:
     print(f"polaridad: {result['label']}, score: {round(result['score'], 2)}")
-
+```
 OUTPUT:
 
 polaridad: LABEL_1, score: 0.55
