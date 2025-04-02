@@ -1,5 +1,5 @@
 # Customer Satisfaction Analysis
-## Sentiment Analysis using Deep Learning with Python
+## Text Mining and Sentiment Analysis using Deep Learning with Python
 
 Se presenta a continuación un Análisis de Sentimiento para frases de texto mediante la librería Transformers de HuggingFace,
 que permite trabajar con Procesamiento de Lenguaje Natural.
